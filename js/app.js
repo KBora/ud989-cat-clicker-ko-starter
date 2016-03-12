@@ -6,10 +6,10 @@ var ViewModel = function() {
 	this.imgAttribution = ko.observable('');
 
 
-	this.incremementCounter = function() {
+	this.incrementCounter = function() {
 		this.clickCount(this.clickCount() + 1);
 	}
-	
+
 }
 
 ko.applyBindings(new ViewModel);
