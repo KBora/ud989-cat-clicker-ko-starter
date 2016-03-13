@@ -24,6 +24,11 @@ var ViewModel = function() {
 
     }, this);
 
+	this.nicknames = ko.observableArray([
+		{ nickname: 'Tabitha' },
+		{ nickname: 'Kitty'}, 
+		{ nickname: 'Tiger'}
+	]);
 
 
 	this.incrementCounter = function() {
