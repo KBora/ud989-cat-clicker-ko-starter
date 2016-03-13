@@ -14,17 +14,16 @@ var ViewModel = function() {
 			{ name: 'Master', countMin: 100, countMax: 1000}
 			];
 
-			
-    return this.firstName() + " " + this.lastName();
+		var clickCountTmp = this.clickCount();
+
+		for (var i = 0, len = levelModel.length; i < len; i++) {
+			if (clickCountTmp >= levelModel[i].countMin && clickCountTmp <= levelModel[i].countMax) {
+				return levelModel[i].name;
+			}
+		}
 
     }, this);
 
-
-var anotherObservableArray = ko.observableArray([
-    { name: "Bungle", type: "Bear" },
-    { name: "George", type: "Hippo" },
-    { name: "Zippy", type: "Unknown" }
-]);
 
 
 	this.incrementCounter = function() {
@@ -39,8 +38,6 @@ var anotherObservableArray = ko.observableArray([
 		} else if (clickCountLocal > 10 && clickCountLocal < 20) {
 
 		}
-
-
 
 	}
 }
