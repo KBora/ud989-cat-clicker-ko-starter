@@ -1,5 +1,5 @@
-var ViewModel = function() {
-	// this is the model (inside the view currently, but can be moved out later)
+var Cat = function() {
+
 	this.clickCount = ko.observable(0);
 	this.name = ko.observable('Tabby');
 	this.imgSrc = ko.observable('img/434164568_fea0ad4013_z.jpg');
@@ -30,21 +30,16 @@ var ViewModel = function() {
 		{ nickname: 'Tiger'}
 	]);
 
+};
+
+var ViewModel = function() {
+
+	this.currentCat = ko.observable( new Cat() );
 
 	this.incrementCounter = function() {
-		this.clickCount(this.clickCount() + 1);
+		this.currentCat().clickCount(this.currentCat().clickCount() + 1);
 	}
 
-	this.updateLevel = function() {
-
-		var clickCountLocal = this.clickCount;
-		if (clickCountLocal < 10) {
-
-		} else if (clickCountLocal > 10 && clickCountLocal < 20) {
-
-		}
-
-	}
 }
 
 ko.applyBindings(new ViewModel);
