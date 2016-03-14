@@ -102,9 +102,16 @@ var ViewModel = function() {
 	};
 
 	this.setCurrentCat = function() {
-		// this is hopefully the current cat
+		// 'this' is  the current cat
 		self.currentCat(this);
-		console.dir(this);
+
+		// alernatively, you can pass the 'object' in the function param and reference that
+		/*
+			this.setCurrentCat = function(clickedCat) {
+				self.currentCat(clickedCat);
+			}
+		*/
+
 	};
 
 }
