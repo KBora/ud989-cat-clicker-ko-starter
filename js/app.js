@@ -40,6 +40,12 @@ var ViewModel = function() {
 
 	this.incrementCounter = function() {
 		self.currentCat().clickCount(self.currentCat().clickCount() + 1);
+
+		// alternatively, can use this syntax:
+		// this.clickCount(this.clickCount() + 1 );
+		// this represents the binding context of the current cat (since this function is called 
+		// from within a 'with' currentCat binding)
+
 	}
 
 }
