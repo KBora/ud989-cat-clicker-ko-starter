@@ -99,7 +99,13 @@ var ViewModel = function() {
 		// this represents the binding context of the current cat (since this function is called 
 		// from within a 'with' currentCat binding)
 
-	}
+	};
+
+	this.setCurrentCat = function() {
+		// this is hopefully the current cat
+		self.currentCat(this);
+		console.dir(this);
+	};
 
 }
 
